@@ -1,6 +1,19 @@
 #summary Valutazione del brano in modo da consigliare l'utente finale
 #labels Phase-Design
 
-==Metodo di clafficazione dei brani (QoS implicita)==
+==Metodo di classificazione dei brani (QoS implicita)==
 
 _Pagina in Costruzione_
+
+=== Quality Of Service Implicita ===
+
+La qualità del servizio verrà gestita sia in maniera implicita che in maniera esplicita.
+La QoS esplicita esula dalla trattazione di questa pagina.<br/> 
+Per *QoS Implicita* si intende una gestione della qualità del servizio che non richiede l'intervento diretto dell'utente. La gestione della QoS implicita si basa su un coefficiente che permetterà la classificazione dei brani sia da parte dell'utente che da parte del Sistema.
+
+=== Coefficiente di Qualità ===
+
+Il *coefficiente di qualità* è influenzato da tre coefficienti distinti:
+  * *Affinità con la Ricerca* : tiene conto di quanto il brano sia pertinente alla ricerca fatta dall'utente. Si tratta di una affinità sintattica e non semantica.
+  * *Qualità del Peer* : tiene conto del carico corrente e della distanza sulla DHT del peer che deve fornire il brano.
+  * *Qualità del File* : tiene conto della qualità del File contenente il brano ( bit-rate del brano, codifica, ecc)
