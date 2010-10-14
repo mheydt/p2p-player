@@ -14,13 +14,18 @@ I peer nel nostro caso non sono distinguibili in base a un ruolo specifico. Ogni
 
 Al fine di permettere una diffusione ottimizzata del flusso sarà necessario un partizionamento dello stesso in componenti atomiche che chiameremo *chunk*.
 
-Un chunk avrà dimensioni fisse pari a *DA DETERMINARE* e ad esso sarà associato un identificativo univoco (per il flusso); tali ID possono essere assegnati in maniera incrementale in un numero compreso nell'intervallo *{{{[0:(len(flusso)/len(chunk)]}}}*. A questo identificativo diamo il nome di *CID*.
+Un chunk avrà dimensioni fisse pari a *DA DETERMINARE* e ad esso sarà associato un identificativo univoco (per il flusso); tali ID possono essere assegnati in maniera incrementale in un numero compreso nell'intervallo *{{{[0:(len(flusso)/len(chunk))]}}}*. A questo identificativo diamo il nome di *CID*.
 
-Al peer richiedente il flusso viene associata una *Window* che rappresenta l'area di interesse per il peer sul flusso. La Window è definita da due parametri
+Al peer richiedente il flusso viene associata una *Sliding Window* che rappresenta l'area di interesse per il peer sul flusso. La Window è definita da un estremo inferiore detto *Base* e comprende la parte del flusso fra il punto identificato da *Base* e il termine del flusso stesso.
 
+Ultima importante caratteristica di un flusso è il cosiddetto *Active Buffer*. Chiamiamo Active Buffer un sottoinsieme della Sliding Window che si estende dalla base comprendendo la parte di flusso riproducibile senza interruzioni. L'active buffer può essere identificato mediante un identificativo detto *ABI* che altro non è che il CID del chunk immediatamente successivo alla parte riproducibile.
+
+Molto può essere spiegato dall'immagine:
+http://sourceforge.net/apps/mediawiki/goalbit/nfs/project/g/go/goalbit/thumb/0/0f/ABI.png/350px-ABI.png
 
 = Collegamenti Utili =
 Alcuni link utili in riferimento all'argomento trattato:
+
 # GoalBit: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]
 
 # UUID: [http://en.wikipedia.org/wiki/Universally_unique_identifier]
