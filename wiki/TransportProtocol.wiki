@@ -3,7 +3,9 @@
 
 = Introduction =
 
-Ho deciso di ispirarmi fortemente al progetto [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]GoalBit. 
+Ho deciso di ispirarmi fortemente al progetto: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]. 
+Sebbene questo sia basato sul BitTorrent e quindi un sistema a Tacker ritengo sia possibile riadattare il sistema di frammentazione al nostro caso.
+Mi limiterò ad inserire qui i dettagli man mano che vado avanti con la progettazione.
 
 
 = Details =
