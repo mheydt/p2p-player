@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Add your content here.
+Ho deciso di ispirarmi fortemente al progetto [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]GoalBit. 
 
 
 = Details =
