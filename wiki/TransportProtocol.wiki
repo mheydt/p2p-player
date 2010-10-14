@@ -14,7 +14,7 @@ I peer nel nostro caso non sono distinguibili in base a un ruolo specifico. Ogni
 
 Al fine di permettere una diffusione ottimizzata del flusso sarà necessario un partizionamento dello stesso in componenti atomiche che chiameremo *chunk*.
 
-Un chunk avrà dimensioni fisse pari a *DA DETERMINARE* e ad esso sarà associato un identificativo univoco (per il flusso); tali ID possono essere assegnati in maniera incrementale in un numero compreso nell'intervallo [0:(len(flusso)/len(chunk)]. A questo identificativo diamo il nome di *CID*.
+Un chunk avrà dimensioni fisse pari a *DA DETERMINARE* e ad esso sarà associato un identificativo univoco (per il flusso); tali ID possono essere assegnati in maniera incrementale in un numero compreso nell'intervallo *\[0:(len(flusso)/len(chunk)\]*. A questo identificativo diamo il nome di *CID*.
 
 Al peer richiedente il flusso viene associata una *Window* che rappresenta l'area di interesse per il peer sul flusso. La Window è definita da due parametri
 
