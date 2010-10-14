@@ -19,5 +19,6 @@ Un chunk avrà dimensioni fisse pari a *DA DETERMINARE* e ad esso sarà associat
 
 
 = Collegamenti Utili =
+Alcuni link utili in riferimento all'argomento trattato:
 # GoalBit: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]
 # UUID: [http://en.wikipedia.org/wiki/Universally_unique_identifier]
