@@ -21,11 +21,12 @@ Al peer richiedente il flusso viene associata una *Sliding Window* che rappresen
 Ultima importante caratteristica di un flusso è il cosiddetto *Active Buffer*. Chiamiamo Active Buffer un sottoinsieme della Sliding Window che si estende dalla base comprendendo la parte di flusso riproducibile senza interruzioni. L'active buffer può essere identificato mediante un identificativo detto *ABI* che altro non è che il CID del chunk immediatamente successivo alla parte riproducibile.
 
 Molto può essere spiegato dall'immagine:
+
 http://sourceforge.net/apps/mediawiki/goalbit/nfs/project/g/go/goalbit/thumb/0/0f/ABI.png/350px-ABI.png
 
 = Collegamenti Utili =
 Alcuni link utili in riferimento all'argomento trattato:
 
-# GoalBit: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]
+* *GoalBit: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]
 
-# UUID: [http://en.wikipedia.org/wiki/Universally_unique_identifier]
+* *UUID: [http://en.wikipedia.org/wiki/Universally_unique_identifier]
