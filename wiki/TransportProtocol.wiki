@@ -3,14 +3,21 @@
 
 = Introduction =
 
-Ho deciso di ispirarmi fortemente al progetto: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]. 
+Ho deciso di ispirarmi fortemente al progetto: GoalBit. 
 Sebbene questo sia basato sul BitTorrent e quindi un sistema a Tacker ritengo sia possibile riadattare il sistema di frammentazione al nostro caso.
 Mi limiterò ad inserire qui i dettagli man mano che vado avanti con la progettazione.
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+I peer nel nostro caso non sono distinguibili in base a un ruolo specifico. Ogni peer si occupa, pertanto sia dell'instradamento che del servizio vero e proprio. Non è, quindi, in alcun modo riproponibile un sistema in cui alcuni peer siano considerabili come Tracker o Superpeer o, comunque, elevarsi al di sopra degli altri.
+
+Al fine di permettere una diffusione ottimizzata del flusso sarà necessario un partizionamento dello stesso in componenti atomiche che chiameremo *chunk*.
+
+Un chunk avrà dimensioni fisse pari a *DA DETERMINARE* e ad esso sarà associato un identificativo univoco (un numero random che si può ottenere mediante standard uuid).
+
+
+
+= Collegamenti Utili =
+* GoalBit: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]
+* UUID: [http://en.wikipedia.org/wiki/Universally_unique_identifier]
