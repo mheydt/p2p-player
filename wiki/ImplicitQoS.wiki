@@ -33,8 +33,8 @@ AFF=sum(P*max(presenze))+sum(P*contributo_concatenazioni)
 }}}
 dove P=1/num_parole_ricerca.<br/>
 Calcoliamo l'affinità del brano con la ricerca "slayer rain blood". La parola "slayer" ha
-presenze 0,1,0 nelle etichette Titolo,Artista,Album quindi il suo valore è 1. La parola "rain" ha presenze 0.33,0,0 quindi il suo valore è 0,33. La parola "blood" ha presenze 0.42,0,0.42 quindi il suo valore è 0.42; inoltre la parola precedente è contenuta nell'etichetta Titolo quindi il contributo delle concatenazioni sarà pari a (4+5)/12 = 0.75. Il peso di ogni parola è pari a P=1/3=0.33. Il coefficiente di affinità sarà AFF=0.33*1+0.33*0.33+0.33*0.42+0.33*0.75=0.825. Se invece la ricerca è "slayer raining blood" il contributo della seconda parola sarà 0.58 e quello delle concatenazioni sarà 1 quindi il coefficiente di affinità sarà 1.
-_Dettagli Implementativi_
+presenze 0,1,0 nelle etichette Titolo,Artista,Album quindi il suo valore è 1. La parola "rain" ha presenze 0.33,0,0 quindi il suo valore è 0,33. La parola "blood" ha presenze 0.42,0,0.42 quindi il suo valore è 0.42; inoltre la parola precedente è contenuta nell'etichetta Titolo quindi il contributo delle concatenazioni sarà pari a (4+5)/12 = 0.75. Il peso di ogni parola è pari a P=1/3=0.33. Il coefficiente di affinità sarà AFF=0.33*1+0.33*0.33+0.33*0.42+0.33*0.75=0.825. Se invece la ricerca è "slayer raining blood" il contributo della seconda parola sarà 0.58 e quello delle concatenazioni sarà 1 quindi il coefficiente di affinità sarà 1.<br/>
+_Dettagli Implementativi_<br/>
 Il calcolo di questo coefficiente si può effettuare con le funzioni associate alle stringe del linguaggio; il set di funzioni richiesto è: substring(),len(),replace(),indexof(). Di seguito lo pseudo codice dell'algoritmo di calcolo:
 {{{
 concatenazione_titolo=0
@@ -61,5 +61,5 @@ for valore in valori:
 }}}
  
 ==== Coefficiente di Qualità del File ====
-  
-
+_Dettagli Implementativi_<br/>
+[http://download.banshee.fm/taglib-sharp/2.0.3.7/taglib-sharp-2.0.3.7-windows.zip TagLib]
