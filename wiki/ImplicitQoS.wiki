@@ -5,6 +5,8 @@
 
 _Pagina in Costruzione_
 
+<wiki:toc max_depth="1" />
+
 === Quality Of Service Implicita ===
 
 La qualità del servizio verrà gestita sia in maniera implicita che in maniera esplicita.
@@ -70,10 +72,10 @@ BR = trunc((log10(track_br/192) + 0.78) * 100 ) / 100
   Bitrate fuori standard genereranno valori inconsistenti; è quindi consigliato, in fase di implementazione, controllare il valore di track_br prima di calcolare il contributo. È importante controllare che track_br sia maggiore di zero per evitare eccezioni nel calcolo del logaritmo in base 10.
   * *Sample Rate* (_SR_) : il contributo della Sample rate viene assegnato in base alla seguente tabella:
 
-  || *track_sr* || *SR* ||
-  || 32000Hz || 0.2 ||
-  || 44100Hz || 0.8 ||
-  || 48000Hz || 1.0 ||
+|| *track_sr* || *SR* ||
+|| 32000Hz || 0.2 ||
+|| 44100Hz || 0.8 ||
+|| 48000Hz || 1.0 ||
 
   Questi tre valori sono gli unici definiti dallo standard.
   * *Channel Mode* (_CM_): il contributo del Channel Mode viene assegnato in base alla seguente tabella: 
