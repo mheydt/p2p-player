@@ -69,7 +69,9 @@ Il coefficiente di Qualità del File è un valore compreso tra 0 e 1 che indica 
 {{{
 BR = trunc((log10(track_br/192) + 0.78) * 100 ) / 100
 }}}
-  Bitrate fuori standard genereranno valori inconsistenti; è quindi consigliato, in fase di implementazione, controllare il valore di track_br prima di calcolare il contributo. È importante controllare che track_br sia maggiore di zero per evitare eccezioni nel calcolo del logaritmo in base 10.
+  Bitrate fuori standard genereranno valori inconsistenti; è quindi consigliato, in fase di implementazione, controllare il valore di track_br prima di calcolare il contributo. È importante controllare che track_br sia maggiore di zero per evitare eccezioni nel calcolo del logaritmo in base 10.<br/>
+  Nel caso di VBR (_Variable Bit Rate_) si utilizza come track_br il valore medio della bitrate oppure, nel caso in cui l'encoding è stato fatto con il metodo a qualità fissa, si utilizza l'indice di qualità normalizzato tra 0 a 1. Ad esempio, gli encoder della famiglia LAME usano un indice di qualità che va da 0 a 9 quindi il contributo della bitrate sarà pari a `track_avg_br/9`.
+
   * *Sample Rate* (_SR_) : il contributo della Sample rate viene assegnato in base alla seguente tabella:
 
 || *track_sr* || *SR* ||
@@ -88,7 +90,12 @@ BR = trunc((log10(track_br/192) + 0.78) * 100 ) / 100
 
   Questi quattro valori sono gli unici definiti dallo standard.
 
+Il coefficiente di qualità del file si calcola a partire dai tre contributi descritti in base alla seguente formula:
+{{{
+FQ = 0.5 * BR + 0.3 * CM + 0.2 * SR
+}}}
+
 _Dettagli Implementativi_<br/>
-  * [http://home.fuse.net/honnert/UltraID3Lib/ UltraID3Lib]
-  * [http://taglib-sharp.sourcearchive.com/ TagLib# Download 1]
-  * [http://download.banshee.fm/taglib-sharp TagLib# Download 2]
+I dati sul file necessari per i calcoli del coefficiente di qualità del file possono essere calcolati mediante librerie esterne. Di seguito sono elencati alcune librerie esterne compatibili con C# ed il .NET Framework che forniscono le funzionalità richieste dai calcoli:
+  * *UltraID3Lib* ([http://home.fuse.net/honnert/UltraID3Lib/ Download])
+  * *TagLib#* ([http://taglib-sharp.sourcearchive.com/ Download 1] | [http://download.banshee.fm/taglib-sharp Download 2])
