@@ -62,4 +62,5 @@ for valore in valori:
  
 ==== Coefficiente di Qualità del File ====
 _Dettagli Implementativi_<br/>
-[http://download.banshee.fm/taglib-sharp/2.0.3.7/taglib-sharp-2.0.3.7-windows.zip TagLib]
+  * [http://taglib-sharp.sourcearchive.com/ TagLib# Download 1]
+  * [http://download.banshee.fm/taglib-sharp/2.0.3.7/taglib-sharp-2.0.3.7-windows.zip TagLib# Download 2]
