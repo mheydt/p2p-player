@@ -5,7 +5,7 @@
 
 _Pagina in Costruzione_
 
-<wiki:toc max_depth="1" />
+<wiki:toc/>
 
 === Quality Of Service Implicita ===
 
