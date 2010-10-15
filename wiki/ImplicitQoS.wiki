@@ -97,5 +97,7 @@ FQ = 0.5 * BR + 0.3 * CM + 0.2 * SR
 
 _Dettagli Implementativi_<br/>
 I dati sul file necessari per i calcoli del coefficiente di qualità del file possono essere calcolati mediante librerie esterne. Di seguito sono elencati alcune librerie esterne compatibili con C# ed il .NET Framework che forniscono le funzionalità richieste dai calcoli:
-  * *UltraID3Lib* ([http://home.fuse.net/honnert/UltraID3Lib/ Download])
+  * *{{{UltraID3Lib}}}* ([http://home.fuse.net/honnert/UltraID3Lib/ Download])
   * *{{{TagLib#}}}* ([http://taglib-sharp.sourcearchive.com/ Download 1] | [http://download.banshee.fm/taglib-sharp Download 2])
+
+==== Coefficiente di Qualità del Peer ====
