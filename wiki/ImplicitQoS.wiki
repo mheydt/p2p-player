@@ -26,7 +26,7 @@ Il coefficiente di affinità ha un peso minore rispetto agli altri in quanto, no
 
 ==== Coefficiente di Affinità ====
 
-Il coefficiente di affinità, come già detto, ritornerà un valore compreso tra 0 e 1 che indicherà l'affinità sintattica dei metadati del brano con la ricerca effettuata dall'utente. Il valore del coefficiente dipende da quale percentuale dei metadati è coperta dalla ricerca dell'utente. Ad esempio la ricerca "slayer rain" avrà un affinità con il brano _Raining Blood_ degli _Slayer_ contenuto nell'album _Reign in Blood_ sarà _0.67_.
+Il coefficiente di affinità è un valore compreso tra 0 e 1 che indica l'affinità sintattica dei metadati del brano con la ricerca effettuata dall'utente. Il valore del coefficiente dipende da quale percentuale dei metadati è coperta dalla ricerca dell'utente. Ad esempio la ricerca "slayer rain" avrà un affinità con il brano _Raining Blood_ degli _Slayer_ contenuto nell'album _Reign in Blood_ sarà _0.67_.
 Il calcolo viene effettuato nel seguente modo: la ricerca viene divisa in parole distinte ed ognuna di questa verrà processata separatamente. Ogni parola viene ricercata all'interno delle tre etichette del brano (Titolo, Artista, Album) ed il suo contributo sarà al valore massimo delle presenze non nulle della parola nelle varie etichette. La presenza è calcolata come il rapporto tra la lunghezza della parola processata e la lunghezza del campo esclusi gli spazi nel caso in cui la parola sia presente, altrimenti vale zero. Quindi riprendendo l'esempio precedente la presenza della parola "rain" all'interno del campo "Raining Blood" è pari a 4/12=0.33. Il contributo della parola "blood" nel brano sarà pari al massimo tra le presenze: nel titolo ha una presenza pari a 5/12, 0 nell'artista e 5/12 nell'album quindi sarà 5/12. Nel caso in cui la parola processata è contenuta nella stessa etichetta della parola precedente si aggiungerà un contributo con peso uguale agli altri e valore pari alla somma della lunghezza delle parole diviso la lunghezza dell'etichetta esclusi gli spazi. La formula finale è la seguente: 
 {{{
 AFF=sum(P*max(presenze))+sum(P*contributo_concatenazioni)
@@ -61,6 +61,31 @@ for valore in valori:
 }}}
  
 ==== Coefficiente di Qualità del File ====
+
+Il coefficiente di Qualità del File è un valore compreso tra 0 e 1 che indica la qualità audio del file. Il coefficiente dipende da 3 parametri:
+  * *BitRate* (_BR_): il contributo della bitrate è calcolato con una funzione in modo che 32kbps (minima bitrate definita dallo standard) risulti pari a zero, 192kbps pari a 0.78 e 320kbps(massima bitrate definita dallo standard) sia uno. Il valore del contributo della bitrate BR è pari a:
+{{{
+BR = trunc((log10(track_br/192) + 0.78) * 100 ) / 100
+}}}
+  Bitrate fuori standard genereranno valori inconsistenti; è quindi consigliato, in fase di implementazione, controllare il valore di track_br prima di calcolare il contributo. È importante controllare che track_br sia maggiore di zero per evitare eccezioni nel calcolo del logaritmo in base 10.
+  * *Sample Rate* (_SR_) : il contributo della Sample rate viene assegnato in base alla seguente tabella:
+
+  || *track_sr* || *SR* ||
+  || 32000Hz || 0.2 ||
+  || 44100Hz || 0.8 ||
+  || 48000Hz || 1.0 ||
+
+  Questi tre valori sono gli unici definiti dallo standard.
+  * *Channel Mode* (_CM_): il contributo del Channel Mode viene assegnato in base alla seguente tabella: 
+
+  || *track_cm* || *CM* ||
+  || Single channel (Mono) || 0.2 ||
+  || Dual channel (2 mono channels) || 0.5 || 
+  || Joint stereo (Stereo) || 0.8 ||
+  || Stereo || 1.0 ||
+
+  Questi quattro valori sono gli unici definiti dallo standard.
+
 _Dettagli Implementativi_<br/>
   * [http://home.fuse.net/honnert/UltraID3Lib/ UltraID3Lib]
   * [http://taglib-sharp.sourcearchive.com/ TagLib# Download 1]
