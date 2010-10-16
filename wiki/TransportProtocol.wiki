@@ -49,6 +49,7 @@ I due messaggi scambiati fondamentali sono la *CHKRQ* (Chunk request) e la *CHKR
 || RID || Resource Identifier. Rappresenta univocamente la risorsa. E` effettivamente l'hash in sha1 (160bit) della risorsa stessa.||
 || CID || Chunk Identifier. Numero progressivo che identifica il chunk nel brano. ||
 || Serving Buffer || Dimensione del serving buffer del fornitore || 
+|| Payload || Il chunk vero e proprio; 60kb ordinario, l'ultimo probabilmente sarà più piccolo ||
 
 == Peer Richiedente ==
 Supponendo di trovarsi in un dato istante T il nostro peer, come nella precedente immagine, avrà una certa ABI.
