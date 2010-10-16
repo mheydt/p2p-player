@@ -33,6 +33,13 @@ Il funzionamento del sistema è essenzialmente basato su tre assunti:
 
 Il metodo usato per la richiesta dei chunk prende il nome di *Chunk Overlapping*.
 
+== Messaggi scambiati ==
+I due messaggi scambiati fondamentali sono la *CHKRQ* (Chunk request) e la *CHKRS* (Chunk response).
+
+=== Chunk Request ===
+|| *Field* || *Details* ||
+|| RID || Resource Identifier. Rappresenta univocamente la risorsa. E` effettivamente l'hash in sha1 (160bit) della risorsa stessa.||
+
 == Peer Richiedente ==
 Supponendo di trovarsi in un dato istante T il nostro peer, come nella precedente immagine, avrà una certa ABI.
 
