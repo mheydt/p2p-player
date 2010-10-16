@@ -38,7 +38,17 @@ I due messaggi scambiati fondamentali sono la *CHKRQ* (Chunk request) e la *CHKR
 
 === Chunk Request ===
 || *Field* || *Details* ||
+|| Message || CHKRQ ||
 || RID || Resource Identifier. Rappresenta univocamente la risorsa. E` effettivamente l'hash in sha1 (160bit) della risorsa stessa.||
+|| CID || Chunk Identifier. Numero progressivo che identifica il chunk nel brano. ||
+|| Active Buffer || Dimensione dell'active buffer del richiedente ||
+
+=== Chunk Response ===
+|| *Field* || *Details* ||
+|| Message || CHKRS ||
+|| RID || Resource Identifier. Rappresenta univocamente la risorsa. E` effettivamente l'hash in sha1 (160bit) della risorsa stessa.||
+|| CID || Chunk Identifier. Numero progressivo che identifica il chunk nel brano. ||
+|| Serving Buffer || Dimensione del serving buffer del fornitore || 
 
 == Peer Richiedente ==
 Supponendo di trovarsi in un dato istante T il nostro peer, come nella precedente immagine, avrà una certa ABI.
@@ -54,7 +64,7 @@ Al fine di impedire la mancanza imprevista di chunk; qualora un chunk richiesto 
 Chunk ottenuti più volte vengono semplicemente scartati.
 
 == Peer Fornitore ==
-Il peer fornitore bufferizza tutte le richieste ricevute e sceglie dal buffer di volta in volta secondo un metodo che si potrebbe definire *MNF* (More Needed First). Si sceglie dal buffer la richiesta avente Active Buffer di minori dimensioni.
+Il peer fornitore bufferizza (all'interno del *Serving Buffer*) tutte le richieste ricevute e sceglie dal buffer di volta in volta secondo un metodo che si potrebbe definire *MNF* (More Needed First). Si sceglie dal buffer la richiesta avente Active Buffer di minori dimensioni.
 
 = Collegamenti Utili =
 Alcuni link utili in riferimento all'argomento trattato:
