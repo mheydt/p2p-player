@@ -46,9 +46,10 @@ Al fine di impedire la mancanza imprevista di chunk; qualora un chunk richiesto 
 
 Chunk ottenuti più volte vengono semplicemente scartati.
 
+== Peer Fornitore ==
+Il peer fornitore bufferizza tutte le richieste ricevute e sceglie dal buffer di volta in volta secondo un metodo che si potrebbe definire *MNF* (More Needed First). Si sceglie dal buffer la richiesta avente Active Buffer di minori dimensioni.
+
 = Collegamenti Utili =
 Alcuni link utili in riferimento all'argomento trattato:
 
-* *GoalBit: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]
-
-* *UUID: [http://en.wikipedia.org/wiki/Universally_unique_identifier]
+  * GoalBit: [http://sourceforge.net/apps/mediawiki/goalbit/index.php?title=Goalbit_architecture]
