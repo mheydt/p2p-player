@@ -1,0 +1,11 @@
+#summary Valutazione esplicita del brano in modo da consigliare l'utente finale
+
+==Metodo di classificazione dei brani (QoS esplicita)==
+
+_Pagina in Costruzione_
+
+<wiki:toc/>
+
+=== Quality Of Service esplicita===
+
+Per *QoS Esplicita* si intende la valutazione diretta che un utente può effettuare dopo aver ascoltato un brano. Tale valutazione non influisce in modo predominante e automatico sul sistema complessivo, ma può essere di supporto agli utenti nel processo di scelta dei brani e, tramite un processo di selezione naturale, migliora infine la qualità del materiale presente all'interno della rete.  
