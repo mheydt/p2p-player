@@ -8,4 +8,4 @@ _Pagina in Costruzione_
 
 === Quality Of Service esplicita===
 
-Per *QoS Esplicita* si intende la qualità che ogni utente assegna a un brano, dopo averlo ascoltato, tramite una valutazione diretta o indiretta. Tale valutazione non influisce in modo predominante e automatico sul sistema complessivo, ma può essere di supporto agli utenti nella procedura di scelta dei brani e, tramite un processo di selezione naturale, migliora infine la qualità del materiale presente all'interno della rete.  
+Per *QoS Esplicita* si intende la qualità che ogni utente assegna a una risorsa audio/video, dopo averla utilizzata, tramite una valutazione diretta o indiretta. Tale valutazione non influisce in modo predominante e automatico sul sistema complessivo, ma può essere di supporto agli utenti nella procedura di scelta delle risorse e, tramite un processo di selezione naturale, migliora infine la qualità del materiale presente all'interno della rete.  
