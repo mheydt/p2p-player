@@ -12,7 +12,7 @@ Per *QoS Esplicita* si intende la qualità che ogni utente assegna a una risorsa
 
 === Metodo di valutazione===
 
-
+La valutazione di una risorsa avviene come già detto dopo il suo utilizzo. Ogni utente possiede una lista dei file che ha usato e associa ad ognuno una valutazione. La valutazione indiretta viene assegnata solo al primo utilizzo "utile", ovvero solo dopo che la risorsa è stata completata interamente. 
 
 === Ottenere la qualità di una risorsa===
 
