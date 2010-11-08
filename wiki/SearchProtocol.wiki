@@ -1,0 +1,11 @@
+#labels Featured,Phase-Design
+Si farà ESPLICITO riferimento all'articolo: http://xlattice.sourceforge.net/components/protocol/kademlia/specs.html.
+L'implementazione rispecchia l'articolo stesso.
+
+Ciascun brano è identificato da: 
+  * un ID3 Tag secondo specifiche da determinare
+  * hash dell'ID3 Tag (sha1)
+  * hash del file (sha1)
+
+La FIND_VALUE di Kademlia verrà modificata come segue:
+Inviamo sulla rete l'ID3 Tag e il suo hash. Per muoverci fra i nodi secondo il processo definito nell'articolo come "Iterative Find Value" usiamo l'hash dell'id3. Per controllare se il nodo contiene il brano effettuiamo un matching basato sul plain ID3 Tag in base alle metriche stabilite nel Wiki ImplicitQoS. Il metodo ritornerà l'hash (o una lista di hash) dei file aventi ID3 Tag sufficientemente affini.
