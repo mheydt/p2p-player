@@ -101,3 +101,8 @@ I dati sul file necessari per i calcoli del coefficiente di qualità del file po
   * *{{{TagLib#}}}* ([http://taglib-sharp.sourcearchive.com/ Download 1] | [http://download.banshee.fm/taglib-sharp Download 2])
 
 ==== Coefficiente di Qualità del Peer ====
+Il coefficiente di qualità del Peer viene calcolato a partire dalla quantità di richieste bufferizzate e non ancora servite dal peer (PR). Definendo Q il numero massimo di richieste che il buffer può contenere, il coefficiente di qualità del peer si calcola secondo la seguente formula:
+{{{
+PQ = PR/Q
+}}}
+Otteniamo anche in questo caso una quantità compresa tra 0 e 1.
