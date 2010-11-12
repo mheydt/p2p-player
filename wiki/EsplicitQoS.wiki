@@ -32,3 +32,5 @@ Alla scadenza della valutazione la risorsa viene cancellata dalla lista delle ri
 La qualità di una risorsa si ottiene allo stesso modo in cui si ottiene la risorsa stessa. Quando infatti viene effettuata la ricerca di un file all'interno della rete, viene lanciata, in modo trasparente all'utente, la ricerca degli utenti che hanno utilizzato lo stesso file e si recupera la valutazione che gli utenti gli hanno assegnato. La valutazione complessiva è pari alla somma di tutte le valutazioni recuperate nella ricerca. 
 
 http://www.citilife.it/p2p.jpg
+
+Seguendo il metodo di ricerca di kademlia, che interroga il nodo e restituisce il valore (se presente) o una lista dei nodi vicini (se il valore è assente), la valutazione può essere inviata come attributo della lista restituita. E' importante sottolineare infatti che un nodo non può restituire sia il brano (valore) che la valutazione, per cui la soluzione proposta sembra abbastanza soddisfacente.
