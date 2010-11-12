@@ -3,8 +3,6 @@
 
 ==Metodo di classificazione dei brani (QoS implicita)==
 
-_Pagina in Costruzione_
-
 <wiki:toc/>
 
 === Quality Of Service Implicita ===
